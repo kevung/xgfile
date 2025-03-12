@@ -18,4 +18,4 @@ This project is licensed under the terms specified in the [LICENSE](LICENSE) fil
 
 ## Acknowledgements
 
-This project is based on the work done in [xgdatatools](https://github.com/oysteijo/xgdatatools) by oysteijo. We have used it as a basis to build and extend the functionality for our specific needs.
+This project is based on the fantastic work done in [xgdatatools](https://github.com/oysteijo/xgdatatools) by oysteijo. This package is a straightforward Go translation of the Python xgdatatools.
