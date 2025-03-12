@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"../pkg/xgfile"
+	"xgfile/pkg/xgfile"
 )
 
 func main() {
