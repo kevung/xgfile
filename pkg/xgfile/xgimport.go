@@ -88,7 +88,8 @@ func (imp *Import) GetFileSegment() ([]*Segment, error) {
 	}
 	defer xginfile.Close()
 
-	gdfheader := &GameDataFormatHdrRecord{}
+	// Use the GameDataFormatHdrRecord from xgstruct
+	gdfheader := &xgstruct.GameDataFormatHdrRecord{}
 	if err := gdfheader.FromStream(xginfile); err != nil {
 		return nil, errors.New("not a game data format file")
 	}
@@ -175,32 +176,3 @@ var XG_FILEMAP = map[string]int{
 }
 
 const XG_GAMEHDR_LEN = 556
-
-type GameDataFormatHdrRecord struct {
-	// ...existing fields...
-}
-
-func (hdr *GameDataFormatHdrRecord) FromStream(stream io.Reader) error {
-	// ...existing code...
-	return nil
-}
-
-type ZlibArchive struct {
-	ArcRegistry []FileRecord
-	// ...existing fields...
-}
-
-func NewZlibArchive(filename string) (*ZlibArchive, error) {
-	// ...existing code...
-	return nil
-}
-
-func (za *ZlibArchive) GetArchiveFile(filerec FileRecord) (*os.File, string, error) {
-	// ...existing code...
-	return nil, "", nil
-}
-
-type FileRecord struct {
-	Name string
-	// ...existing fields...
-}
